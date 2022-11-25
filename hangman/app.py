@@ -1,12 +1,12 @@
 import random
-import names
+import data
 import artwork
 # Welcome Logo 
 print(artwork.logo)
 print("\n\n")
 # initialization
 stages = artwork.stages
-word_list = names.names_list
+word_list = data.names_list
 chosen_word = random.choice(word_list)
 lives = 6
 
