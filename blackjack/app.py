@@ -35,17 +35,17 @@ def play_game():
     user_cards = []
     comp_cards = []
     # deal 2 cards to both comp and user
-    for deal in range(2):
+    for _ in range(2):
         user_cards.append(deal_card())
         comp_cards.append(deal_card())
     
+    print(f"Computer's first card: {comp_cards[0]}.")
+    comp_score = calculate_score(comp_cards)
     is_game_over = False
     # user will draw the cards
     while not is_game_over:
         user_score = calculate_score(user_cards)
-        comp_score = calculate_score(comp_cards)
         print(f"Your cards: {user_cards}. Your score is {user_score}")
-        print(f"Computer's first card: {comp_cards[0]}.")
         
         if comp_score == 0 or user_score == 0 or user_score > 21:
             is_game_over = True
