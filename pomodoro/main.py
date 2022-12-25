@@ -1,5 +1,6 @@
 from tkinter import *
 import math
+from playsound import playsound
 
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
@@ -7,7 +8,7 @@ RED = "#e7305b"
 GREEN = "#9bdeac"
 YELLOW = "#f7f5dd"
 FONT_NAME = "Courier"
-WORK_MIN = 1
+WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 reps = 0
@@ -30,13 +31,16 @@ def start_timer():
     if reps % 8 == 0:
         # if its 8th rep
         title.config(text="Break", fg=RED)
+        playsound("./beep_break.mp3")
         start_countdown(long_brk_sec)
     elif reps % 2 == 0:
         # if its 2nd, 4th, 6th rep
         title.config(text="Break", fg=PINK)
+        playsound("./beep_break.mp3")
         start_countdown(short_brk_sec)
     else:
         title.config(text="Timer", fg=GREEN)
+        playsound("./beep_work.mp3")
         start_countdown(work_sec)
 
 
