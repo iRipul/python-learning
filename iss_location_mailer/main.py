@@ -4,7 +4,7 @@ from dateutil import tz
 import math
 import smtplib
 
-MY_LOCATION = (29.931750, 73.873820)
+MY_LOCATION = (<lat>, <long>)
 
 
 def get_iss_location():
