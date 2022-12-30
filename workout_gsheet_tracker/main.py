@@ -9,7 +9,7 @@ SHEETY_API_URL = f"https://api.sheety.co/{SHEETY_API}/myworkout/workouts"
 SHEETY_TOKEN = os.environ["SHEETY_TOKEN"]
 
 
-def format_exercise(exercise):
+def format_exercise_data(exercise):
     now = dt.datetime.now()
     date = now.strftime("%d/%m/%Y")
     time = now.strftime("%H:%M:%S")
@@ -34,7 +34,7 @@ def process_query(query):
     response = requests.post(exercise_endpoint, params, headers=headers)
     response.raise_for_status()
     data = response.json()
-    return [format_exercise(exercise) for exercise in data["exercises"]]
+    return [format_exercise_data(exercise) for exercise in data["exercises"]]
 
 
 def get_workout_data():
