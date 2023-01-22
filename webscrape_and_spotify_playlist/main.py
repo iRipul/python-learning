@@ -27,7 +27,6 @@ for title in titles:
     result = sp.search(q=f"track:{title} year:{year}", type="track")
     # print(result)
     try:
-        # uri = result["tracks"]["items"][0]["external_urls"]["spotify"]
         uri = result["tracks"]["items"][0]["uri"]
         song_uris.append(uri)
     except IndexError:
