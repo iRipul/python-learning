@@ -24,12 +24,12 @@
 					<section id="main">
 						<header>
 							<span class="avatar"><img src="static/images/avatar.png" alt="" width="150" height="150"/></span>
-							<h1>Ripul Chhabra</h1>
-							<p>Software Engineer</p>
+							<h1>{{data.name}}</h1>
+							<p>{{data.profession}}</p>
 						</header>
 						<footer>
 							<ul class="icons">
-								<li><a href="https://twitter.com/ripulchhabra" class="fa-twitter" target="_blank">Twitter</a></li>
+								<li><a href="{{data.twitter}}" class="fa-twitter" target="_blank">Twitter</a></li>
 								<li><a href="https://github.com/iRipul" class="fa-github">GitHub</a></li>
 <!--								<li><a href="#" class="fa-facebook">Facebook</a></li>-->
 							</ul>
@@ -38,7 +38,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="copyright">
-							<li>&copy; Ripul Chhabra</li>
+							<li>&copy; {{data["name"]}} - {{data["year"]}}</li>
 							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</footer>
